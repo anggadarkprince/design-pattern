@@ -13,6 +13,12 @@ class CartProxy implements Cart
 {
     private $shoppingCart;
 
+    public function addProduct($product){
+        if(!array_key_exists($product, $this->getProducts())){
+            $this->shoppingCart->add($product);
+        }
+    }
+
     public function getProducts(){
         if(is_null($this->shoppingCart)){
             $this->shoppingCart = new ShoppingCart();

@@ -11,7 +11,11 @@ namespace ProxyPattern;
 
 class ShoppingCart implements Cart
 {
-    private $products;
+    private $products = array();
+
+    public function add($item){
+        $this->products[] = $item;
+    }
 
     public function getProducts(){
         return $this->products;

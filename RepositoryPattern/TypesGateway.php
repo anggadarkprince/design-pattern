@@ -12,7 +12,20 @@ namespace RepositoryPattern;
 class TypesGateway
 {
     public function retrieveAllTypes(){
-        return "Retrieve all types of data";
+        return array(
+            array(
+                "name"=>"monitor",
+                "code"=>"4356",
+                "group"=>"ComputerHardware"
+            ),array(
+                "name"=>"mouse",
+                "code"=>"5634",
+                "group"=>"ComputerHardware"
+            ),array(
+                "name"=>"windows",
+                "code"=>"3632",
+                "group"=>"ComputerSoftware"
+            ));
     }
 
 }

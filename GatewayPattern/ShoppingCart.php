@@ -14,7 +14,7 @@ class ShoppingCart
     private $gateway;
     private $shoppingCartIds = array();
 
-    public function __construct(CartGateway $gateway, $ids = array()){
+    public function __construct(CartGateway $gateway = null, $ids = array()){
         $this->gateway = $gateway;
         $this->shoppingCartIds = $ids;
     }

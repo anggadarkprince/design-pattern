@@ -15,8 +15,9 @@ class TypesFactory
         if(empty($typeData)){
             return null;
         }
-        return new ProductTypes(
-            $typeData['category'],
+        return new ProductType(
+            $typeData['name'],
+            $typeData['group'],
             $typeData['code']
         );
     }
