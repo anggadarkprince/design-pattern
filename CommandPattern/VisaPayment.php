@@ -14,7 +14,7 @@ class VisaPayment implements PaymentMethod
 
     public function execute()
     {
-        echo "pay with Visa";
+        echo "pay with Visa<br>";
     }
 
     public function __toString(){

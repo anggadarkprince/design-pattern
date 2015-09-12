@@ -14,7 +14,7 @@ class PayPalPayment implements PaymentMethod
 
     public function execute()
     {
-        echo "pay with PayPal";
+        echo "pay with PayPal<br>";
     }
 
     public function __toString(){

@@ -14,17 +14,21 @@ use FactoryPattern\Product;
 class NullProduct implements Product
 {
 
-    function getName()
+    public function __construct(){
+        echo " [swap with null object]";
+    }
+
+    public function getName()
     {
         return "";
     }
 
-    function getPrice()
+    public function getPrice()
     {
         return 0;
     }
 
-    function getDescription()
+    public function getDescription()
     {
         return "";
     }

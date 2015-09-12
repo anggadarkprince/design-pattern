@@ -11,7 +11,20 @@ namespace CommandPattern;
 
 class User
 {
+    private $name;
     private $paymentMethod;
+
+    function __construct($name){
+        $this->name = $name;
+    }
+
+    public function setName($name){
+        $this->name = $name;
+    }
+
+    public function getName(){
+        return $this->name;
+    }
 
     function setPaymentMethod($method){
         $this->paymentMethod = $method;
@@ -20,4 +33,5 @@ class User
     function getPaymentMethod(){
         return $this->paymentMethod;
     }
+
 }

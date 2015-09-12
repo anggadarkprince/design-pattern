@@ -15,19 +15,21 @@ class Receipt
 {
     private $total;
 
-    function  addProductById($id){
+    public function addProductById($id){
+        echo "Add product id ".$id;
         $provider = new ProductProvider();
         $product = $provider->findProduct($id);
         $this->addTotal($product);
     }
 
-    function addTotal(Product $product){
+    private function addTotal(Product $product){
         if(!is_null($product)) {
             $this->total += $product->getPrice();
+            echo  " price ".$product->getPrice()."<br>";
         }
     }
 
-    function getTotalPrice(){
+    public function getTotalPrice(){
         return $this->total;
     }
 
