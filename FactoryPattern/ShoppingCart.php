@@ -29,7 +29,6 @@ class ShoppingCart
 
     public function printInvoice(){
         $totalPayment = 0;
-        echo "---------INVOICE---------<br>";
         foreach($this->productInTheCart as $product):
 
             echo "<strong>".$product->getName()."</strong> (IDR ".$product->getPrice().")<br>";
@@ -37,8 +36,7 @@ class ShoppingCart
 
             $totalPayment += $product->getPrice();
         endforeach;
-        echo "------------------------------<br>";
-        echo "TOTAL: IDR ".$totalPayment."<br>";
+        echo "<strong>TOTAL: IDR ".$totalPayment."</strong><br>";
     }
 
 }

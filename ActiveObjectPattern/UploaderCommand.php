@@ -24,7 +24,7 @@ class UploaderCommand
 
     public function execute(){
         $this->uploaded += $this->chunk;
-        echo "<br>".$this->uploaded."/".$this->size;
+        echo $this->uploaded."/".$this->size."<br>";
         if($this->uploaded < $this->size){
             $this->multiUploader->addUploader($this);
         }
